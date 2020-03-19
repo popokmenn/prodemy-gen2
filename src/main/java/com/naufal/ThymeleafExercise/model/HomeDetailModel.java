@@ -2,8 +2,21 @@ package com.naufal.ThymeleafExercise.model;
 
 import java.util.Date;
 
-public class HomeDetailModel {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = HomeDetailModel.TABLE_NAME)
+public class HomeDetailModel {
+	
+	public static final String TABLE_NAME = "t_home_detail";
+
+	@Id
+	@GeneratedValue
+	private Long id;
+	
 	private String alamat;
 
 	private String[] hobi;
